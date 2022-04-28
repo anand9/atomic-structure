@@ -26,7 +26,7 @@ export const NewUser = () => {
             onCreate={onSubmit}
           />
 
-          <div className="d-flex flex-row-reverse mb-5">
+          <div className="d-flex flex-row-reverse mb-5 mt-4">
             <div>
               <Button onClick={onSubmit} color="primary">
                 Submit

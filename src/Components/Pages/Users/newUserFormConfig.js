@@ -39,6 +39,42 @@ const newUserFormConfig = {
             xs: 6,
           },
         },
+        {
+          label: "Profile Description",
+          required: true,
+          id: "profile_description",
+          type: "editor_quill",
+          placeholder: "Enter your description",
+          defaultValue: null,
+          disabled: false,
+          validation: yup
+            .string()
+            .required("Mandatory Field")
+            .nullable("Mandatory Field"),
+          spacing: {
+            xs: 6,
+          },
+        },
+        {
+          label: "Primary Address",
+          required: true,
+          id: "primary_address",
+          type: "textarea",
+          placeholder: "Enter your description",
+          defaultValue: null,
+          disabled: false,
+          validation: yup
+            .string()
+            .required("Mandatory Field")
+            .nullable("Mandatory Field"),
+          spacing: {
+            xs: 6,
+          },
+        },
+        
+
+
+
         // {
         //   label: "Number of Positions",
         //   required: true,
@@ -261,9 +297,9 @@ const newUserFormConfig = {
       heading: "Other Details",
       fields: [
         {
-          label: "Onboarding Date",
+          label: "Date of Birth",
           required: true,
-          id: "onboard_by",
+          id: "dob",
           type: "date",
           placeholder: null,
           defaultValue: "",
@@ -277,52 +313,84 @@ const newUserFormConfig = {
           },
         },
         {
-          label: "Job Type",
-          required: false,
-          id: "job_type",
-          type: "select",
-          isMulti: false,
+          label: "Referral code",
+          required: true,
+          id: "referral_code",
+          type: "text",
           placeholder: null,
           defaultValue: "",
           disabled: false,
-          options: [],
+          validation: yup
+            .string()
+            .required("Mandatory Field")
+            .nullable("Mandatory Field"),
           spacing: {
             xs: 4,
           },
         },
         {
-          label: "Employment Type",
-          required: false,
-          id: "employment_type",
-          type: "select",
+          label: "Department",
+          required: true,
+          id: "department",
+          type: "text",
           placeholder: null,
-          defaultValue: null,
+          defaultValue: "",
           disabled: false,
-          options: [],
+          validation: yup
+            .string()
+            .required("Mandatory Field")
+            .nullable("Mandatory Field"),
           spacing: {
             xs: 4,
           },
         },
+        // {
+        //   label: "Job Type",
+        //   required: false,
+        //   id: "job_type",
+        //   type: "select",
+        //   isMulti: false,
+        //   placeholder: null,
+        //   defaultValue: "",
+        //   disabled: false,
+        //   options: ["a", "b"],
+        //   spacing: {
+        //     xs: 4,
+        //   },
+        // },
+        // {
+        //   label: "Employment Type",
+        //   required: false,
+        //   id: "employment_type",
+        //   type: "select",
+        //   placeholder: null,
+        //   defaultValue: null,
+        //   disabled: false,
+        //   options: [],
+        //   spacing: {
+        //     xs: 4,
+        //   },
+        // },
       ],
     },
-    {
-      heading: "Hiring Details",
-      fields: [
-        {
-          label: "Recruiter Name",
-          required: false,
-          id: "recruiter_name",
-          type: "select",
-          placeholder: null,
-          defaultValue: null,
-          disabled: false,
-          options: [],
-          spacing: {
-            xs: 6,
-          },
-        },
-      ],
-    },
+    // {
+    //   heading: "Hiring Details",
+    //   fields: [
+    //     {
+    //       label: "Recruiter Name",
+    //       required: false,
+    //       id: "recruiter_name",
+    //       type: "select",
+    //       placeholder: null,
+    //       defaultValue: null,
+    //       disabled: false,
+    //       options: [],
+    //       spacing: {
+    //         xs: 6,
+    //       },
+    //     },
+    //   ],
+    // },
   ],
 };
 

@@ -1,6 +1,8 @@
 import React from "react";
 import ReactQuill from "react-quill";
 import { FormText } from "reactstrap";
+import "react-quill/dist/quill.snow.css";
+
 const TextEditorQuill = ({ fields, onEditorEdit }) => {
   const [reactQuillText, setReactQuillText] = React.useState("");
 
@@ -33,8 +35,13 @@ const TextEditorQuill = ({ fields, onEditorEdit }) => {
           toolbar: [
             // [{ 'header': [1, 2] }],
             ["bold", "italic"],
-            [{'list': 'ordered'}, {'list': 'bullet'}, {'indent': '-1'}, {'indent': '+1'}],
-            ["link", "blockquote", "code", ],
+            [
+              { list: "ordered" },
+              { list: "bullet" },
+              { indent: "-1" },
+              { indent: "+1" },
+            ],
+            ["link", "blockquote", "code"],
           ],
         }}
       />
