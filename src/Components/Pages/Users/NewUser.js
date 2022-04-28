@@ -8,8 +8,6 @@ export const NewUser = () => {
 
   const handleFormChange = (obj, id, type) => {
     setFormData({ ...formData, [id]: obj });
-    // formData = { ...formData, [id]: obj };
-    // this.setState({ formData: formData, check: "changed" });
   };
 
   const onSubmit = () => {
